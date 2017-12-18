@@ -46,9 +46,8 @@ available for a particular waist, length, and style.
 
 __Testing:__
 I tested the models for basic validations and associations with the help of FactoryGirl (now apparently called FactoryBot since October 2017) and Shoulda Matchers. I decided
-to test the controllers with "request" specs instead of controller specs which I learned is recommended by both the Rails and Rspec core team because it "makes requests with
-a thin wrapper around Rails’ integration tests, and are designed to drive behavior through the full stack, including routing." I included a JSON requst helper to parse
-response body.
+to test the controllers with "request" specs instead of controller specs which is recommended by both the Rails and Rspec core team. I also included a JSON request helper to 
+parse the response body.
 
 For the request specs I chose to only test GET index and show routes since that's all the current challenge required.
 
@@ -56,14 +55,14 @@ __Frontend:__
 For the frontend display I decided to use React. I realize that the instructions just asked for a webpage to list the products and inventory grouped together
 but I really like using React and wanted to try to create a fun experience for interacting with the data. 
 
-In order to skip spending time configuring webpack and babel I chose to use the 'create-react-app' cli within the rails project. I would normally have the React frontend
+In order to skip spending time on configuration I chose to use the 'create-react-app' cli within the rails project. I would normally have the React frontend
 in a completely different repository but thought that would make running this application more challenging and annoying so I kept them together. The user experience is meant
 to be interactive, somewhat similar to what it's like to shop on Bonobos.com with these goals in mind:
 
 * As a user I can scroll through the exisiting products or navigate to them from the sidebar
 * As a user I can choose my waist size, pant length, and style to see what's currently available in stock
-* After I select all three inventory attributes of a particular product I should see the "count" of how many pairs are available
-* If I choose another product the other previously selected product sizes will be deselected
+* After a user selects all three inventory attributes of a particular product the application will search for that products inventory item and display its availability
+* If the user chooses another product the other previously selected product sizes will be deselected
 
 __API && Improvements:__
 I chose to use a serializer for the product data to recieve nested inventory data on request with active_model_serializers. I also versioned the api by
@@ -73,9 +72,9 @@ the appropriate request headers for the correct api version.
 Additional improvements:
 * Pagination for larger data sets that could portion our data while optimizing for speed.
 * JSON based token authentication if we suddenly have users that want to purchase the products listed. That would mean that each api request would need to have
-a valid token and user. If valid it would generate a token that would have an expiration date for a particular user session.
+a valid token and user. Once valid it would generate a token that would have an expiration date for a particular user session.
 
 I enjoyed spending time thinking through how to build this application, especially when it came to parsing the data, and building the api. I hope
-you enjoy it! Thanks!
+you enjoy it and would appreciate any feedback. Thanks!
 
 - Peter
