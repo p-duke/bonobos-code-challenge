@@ -1,0 +1,76 @@
+/* Bootstrap Overrides */
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.product {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.product__image {
+  height: 200px;
+  width: 200px;
+}
+
+.nav {
+  position: fixed;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.sidebar {
+  box-shadow: 5px 0 5px -3px rgba(0,0,0,.15);
+  height: 1600px;
+  border-right: 1px solid #CCC;
+  padding: 15px 15px 15px 5px;
+}
+
+.sidebar__list {
+  margin: 5px 0px 0px 30px;
+}
+
+.sidebar__list__item {
+  margin-bottom: 5px;
+}
+
+#jumbotron--clear-padding {
+  padding: 0;
+  background-color: transparent;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.nav-pills > li > a:link {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.glyphicon {
+  left: 65px;
+}
+
+.nav__items {
+  font-weight: bold;
+  color: #000000;
+}
+
+.nav_items:hover {
+  text-decoration: none;
+}
+
+#inventory__button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: rgb(204, 204, 204) 2px 1px 10px;
+}
+
